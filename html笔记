@@ -1,0 +1,116 @@
+
+form 表单
+
+<form action = "http://sssss" method='GET'>
+    <input type='text' name='q'/>
+    <input type='text' name='b'/>
+ </form>
+
+ GET: http://ssssss?q=asdf&&b=adsf
+ POST:
+text-align
+font-size
+:hover
+float 让标签浪起来，块级也可以堆叠
+line-height
+border
+color
+
+display
+display: none
+display:inline
+display: block
+display: inline-block
+具有inline，默认自己有多少占多少
+具有block，设置高度宽度，padding margin
+
+行内标签： 无法设置宽度，高度 padding margin
+块级标签：可设置高度，宽度，padding margin
+
+padding 内边距
+margin 外边距
+
+position: fixed; top: 0; left: 0; bottom: 0; right: 0;
+    fixed => 固定在某个位置
+
+ position: absolute;
+    relative + absolute: 子视图相对父视图；依据父标签定位
+    <div style="position: relative; width: 500px; height: 400px; border: 1px  solid red ;margin: 0 auto; position: relative;">
+         <div style="position: absolute; width: 50px; height: 50px; left: 0; bottom: 0; border: 1px solid black;"></div>
+    </div>
+
+z-index: 层级顺序
+opacity: 透明度
+
+overflow: hidden 超过边界隐藏
+overflow: auto 超过边界出现滚动条
+hover：鼠标放上去的样式
+background-image：
+background-repeat： repeat-Y
+backgroud-position-x: 10px;
+background-position-y:10px'
+
+页面布局
+   主站一：
+         <div class="pg-header"><div>
+          <div class="pg-contentr"><div>
+          <div class="pg-footer"><div>
+
+   后台管理布局：
+
+
+javascript笔记：
+<script></script> 放在body里的最下面
+基本数据类型
+ 数字
+ age = 18
+ 字符串
+ a = "lieon"
+ a.chartAt(index)
+ a.substring(startIndex, endIndex)
+ a.length
+ 数组
+ 字典
+ 布尔值
+For循环
+条件语句
+    ==
+    !=
+    ===
+    !==
+    ||
+    &&
+
+Dom:
+找标签
+   - 直接找
+     document.getElementById('i1')
+     document.getElementsByTagName('div')
+     document.getElementsByClassName('c1')
+
+   - 间接找
+    tag =  document.getElementById('i1')
+    tag.parentElement 父节点标签元素
+    tag.children  所有子标签
+    tag.firstElementChild  第一个子标签
+    tag.lastElementChild  最后一个子标签
+    tag.nextElementSibling  下一个兄弟标签
+    tag.previousElementSibling 上一个兄弟标签
+
+操作：
+    获取标签中的文本内容
+    标签.innerText
+
+    innerText
+    checkbox： checkbox.checked = true
+    className： tag.className = 'c1' 直接对样式操作
+    classList: tag.classList.add('c1') tag.remove('c2') 添加，删除指定样式
+
+事件：
+
+ 定时器
+
+js作用域： 1.以函数作为作用域，函数的作用域在函数未被调用之前，已经创建
+          2.函数的作用域存在作用链，并且也是在被调用之前被创建
+          3.局部变量提前声明
+v
