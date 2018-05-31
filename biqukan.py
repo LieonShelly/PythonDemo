@@ -4,7 +4,7 @@ import time
 import sys
 import types
 from urllib import request
-
+from  bs4 import BeautifulSoup
 
 class Donload(object):
 	def __init__(self, target):
@@ -15,4 +15,8 @@ class Donload(object):
 		charter = re.compile(u'[第第](.+)章]', re.IGNORECASE)
 		target_req = request.Request(url=self.__target_url, headers=self.__head)
 		target_response = request.urlopen(target_req)
-		target_html = target_req
+		target_html = target_req.read().decode('gbk', 'ignore')
+		listmain_suop = BeautifulSoup(target_html, 'lxml')
+		chapters = listmain_suop.find_all('div', classs_ = 'listmain')
+		download_soup = BeautifulSoup(str(chapters), 'lxml')
+		novl_name = str(download_soup.dl.dt)

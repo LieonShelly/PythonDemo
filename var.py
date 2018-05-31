@@ -100,8 +100,11 @@ class ElectriCar(Car):
 class Dog:
 
     def __init__(self): #构造方法
+
     def __del__(self): #析构方法
+
     def __call__(self, *args, **kwargs):# 对象后加括号时调用
+
     @staticmethod
     def eat(self):
         print("asdf")
